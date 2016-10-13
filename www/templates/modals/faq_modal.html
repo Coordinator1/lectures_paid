@@ -1,0 +1,40 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <i class="ion-close contact-modal-close" ng-click="closeModalFaq()"></i>
+    </ion-header-bar>
+    <ion-content class="faq-modal">
+        <!-- <hr> -->
+        <form>
+            <div class="faq-input-label-wrapper">
+                <span class="faq-modal-title">Имя</span>
+                <br>
+                <input type="text" placeholder="Ввидите Ваше имя" ng-model="faq.username" required/>
+            </div>
+            <hr>
+            <div class="faq-input-label-wrapper">
+                <span class="faq-modal-title">Email</span>
+                <br>
+                <input type="text" placeholder="Ввидите Ваш Email" ng-model="faq.email" required/>
+            </div>
+            <hr>
+            <div class="faq-input-label-wrapper">
+                <span class="faq-modal-title">Тема вопроса</span>
+                <br>
+                <input type="text" placeholder="Тема" ng-model="faq.title" required/>
+            </div>
+            <hr>
+            <div class="faq-input-label-wrapper">
+                <span class="faq-modal-title">Сообщение</span>
+                <br>
+                <textarea class="faq-modal-textarea" placeholder="Задайте ваш вопрос" ng-model="faq.question" required/>
+                </textarea>
+            </div>
+            <hr class="modal-margin-bottom">
+            <div class="faq-modal-send-button-wrapper">
+                <button class="button button-energized faq-modal-button" ng-click='checkInput();'>
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,28 @@
+<ion-view view-title="Контакты">
+    <ion-content class="info-project">
+        <hr class="contacts-border-margin-top">
+        <div class="email">
+            <span class="contacts-title">Наша почта</span>
+            <br>
+            <span>{{about.email}}</span>
+        </div>
+        <hr class="contacts-border">
+        <div class="skype">
+            <span class="contacts-title">Наш скайп</span>
+            <br>
+            <span>{{about.skype}}</span>
+        </div>
+        <hr class="contacts-border">
+        <div class="site">
+            <span class="contacts-title">Адрес сайта</span>
+            <br>
+            <span>{{about.site}}</span>
+        </div>
+        <hr class="contacts-border-margin-bottom">
+        <div class="contact-send-button-wrapper">
+            <button class="button button-energized contacts-button" ng-click="openModalContactForm()">
+                Свяжитесь с нами
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

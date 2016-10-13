@@ -1,0 +1,24 @@
+<ion-view view-title="Вопросы - Ответы">
+    <ion-content class="padding">
+        <div class="wrapper-faq-button">
+            <button class="button button-energized faq-button" ng-click="openModalFaq()">
+                Задать вопрос
+            </button>
+        </div>
+        <ion-list class="padding">
+            <div ng-repeat="content in faqList">
+                <div class="item faq-list-item" ng-class-odd="'list-odd'" ng-class-even="'list-even'">
+                    <ion-item class="item item-stable list-item accordion-item-list" style="background-color: transparent; color: #fff; border: 0px solid transparent;" ng-click="toggleAnswer(content)" ng-class="{active: isAnswerShown(content)}">
+                        <div class="col col-20 list-left-col">
+                            <i class="icon faq-icon" ng-class="isAnswerShown(content) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                        </div>
+                            <span class="list-title" style="white-space: pre-wrap;">{{content.question}}</span>
+                    </ion-item>
+                </div>
+                <ion-item class="item-accordion accordion-content" style="background-color: transparent; color: #fff; border: 0px; " ng-show="isAnswerShown(content)">
+                    <span style="white-space: pre-wrap;">{{content.answer}}</span>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

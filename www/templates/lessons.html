@@ -1,0 +1,17 @@
+<ion-view view-title="Список уроков">
+    <ion-content class="padding">
+        <ul class="list padding">
+            <li class="item list-item" style="" ng-repeat="lesson in lessonsList" ng-class-odd="'list-odd'" ng-class-even="'list-even'">
+                <div class="row list-row" ng-click="goToLessonDescription(lesson.id)">
+                    <div class="col col-20 left-col">
+                        <span class="list-id">{{lesson.id}}</span>
+                    </div>
+                    <div class="col">
+                        <span class="lessons-list" style="white-space: pre-wrap;">{{lesson.name}}</span>
+                        <i class="ion-chevron-right an-qu-list"></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

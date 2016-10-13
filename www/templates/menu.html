@@ -1,0 +1,37 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-primary">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-content class="menu-background">
+            <div class="menu-logo-header">
+              <span class="menu-logo-title">ТЕНДЕРЫ ДЛЯ ЧАЙНИКОВ<br> Пошаговая инструкция</span>
+            </div>
+            <ion-list>
+                <ion-item class="menu-item" menu-close href="#{{ROUTES.APP}}{{ROUTES.LESSONS}}">
+                    <img src="img/main.png" class="menu-img-item">Уроки
+                </ion-item>
+                <ion-item class="menu-item" menu-close href="#{{ROUTES.APP}}{{ROUTES.FAQ}}">
+                    <img src="img/2 (2).png" class="menu-img-item">Вопрос - ответ
+                </ion-item>
+                <ion-item class="menu-item" menu-close href="#{{ROUTES.APP}}{{ROUTES.VIDEOLESSONS}}">
+                    <img src="img/3 (2).png" class="menu-img-item">Видео - уроки
+                </ion-item>
+                <ion-item class="menu-item" menu-close href="#{{ROUTES.APP}}{{ROUTES.SPECIALLESSONS}}">
+                    <img src="img/4 (2).png" class="menu-img-item">Спец - уроки
+                </ion-item>
+                <ion-item class="menu-item" menu-close href="#{{ROUTES.APP}}{{ROUTES.INFO}}">
+                    <img src="img/info.png" class="menu-img-item">О проекте
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

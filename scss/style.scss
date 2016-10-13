@@ -1,0 +1,518 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/Roboto-Light.ttf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+h4 {
+    font-weight: bolder;
+    font-style: normal;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #456292;
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+$white-color: #fff;
+
+button-energized{
+    border-color: #a2a2a2;
+    background-color: #e6b500;
+}
+
+/* @extend class */
+.position-null {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* @extend class*/
+.center-block {
+    width: 100%;
+    text-align: center;
+}
+
+/* @extend class*/
+.main-base {
+    background-repeat: no-repeat;
+    background-size: 13%;
+    height: 80px;
+    background-position: 15px;
+}
+
+/* @extend class*/
+.main-activated {
+    background-repeat: no-repeat;
+    background-size: 13%;
+    height: 80px;
+    background-position: 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*** System style ***/
+.bar.bar-primary {
+    background-color: #456292;
+}
+
+ion-content {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+
+.item.active {
+    color: $white-color;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.bar .button.back-button,
+.bar button.back-button {
+    color: $white-color;
+}
+
+.bar-primary .button.button-icon {
+    color: $white-color;
+}
+
+.bar.bar-primary .title {
+    color: $white-color;
+}
+
+.tabs-striped.tabs-background-primary .tabs {
+    background-color: #456292;
+}
+
+/*** Menu style ***/
+.menu-background {
+    background-image: none;
+    background-color: $white-color !important;
+}
+
+.menu-logo-header {
+    width: 100%;
+    height: 176px;
+    background-color: #456292;
+    color: $white-color;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 65px;
+}
+
+.menu-logo-title {
+    text-align: center;
+}
+
+.menu-item {
+    border-width: 0px;
+}
+
+.menu-img-item {
+    width: 25px;
+    margin-right: 15px;
+}
+
+/*** Tenders style ***/
+.item.main-faq {
+    background-image: url('../img/2 (2).png');
+    @extend .main-base;
+}
+
+.item.main-faq.activated {
+    background-image: url('../img/2_1 (1).png');
+    @extend .main-activated;
+}
+
+.item.main-video {
+    background-image: url('../img/3 (2).png');
+    @extend .main-base;
+}
+
+.item.main-video.activated {
+    background-image: url('../img/3_1 (1).png');
+    @extend .main-activated;
+}
+
+.item.main-special {
+    background-image: url('../img/4 (2).png');
+    @extend .main-base;
+}
+
+.item.main-special.activated {
+    background-image: url('../img/4_1 (1).png');
+    @extend .main-activated;
+}
+
+.lesson-block {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $white-color;
+    padding: 16px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-top: -85px;
+}
+
+.lesson-title {
+    @extend .position-null;
+    width: 60%;
+    height: 27%;
+    margin: auto;
+    font-size: 16px;
+}
+
+.lesson-chevron {
+    position: absolute;
+    top: 50%;
+    left: 117%;
+    height: 30%;
+    width: 50%;
+    margin: -2.5% 0 0 -27%;
+    font-size: 1.1rem;
+}
+
+.button {
+    border-radius: 0px !important;
+}
+
+.main-list {
+    background: transparent;
+    color: $white-color;
+    margin-top: 2px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.section {
+    @extend .position-null;
+    width: 60%;
+    height: 22%;
+    margin: auto;
+}
+
+.an-qu-list {
+    position: absolute;
+    top: 50%;
+    left: 117%;
+    height: 30%;
+    width: 50%;
+    margin: -2.5% 0 0 -27%;
+    font-size: 0.9rem;
+}
+
+.icon-align {
+    @extend .position-null;
+    width: 20px;
+    height: 23%;
+    margin: 9% 0 0 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*** List style for all views where use list ***/
+
+.faq-list-item {
+    color: $white-color;
+    border: transparent;
+    margin-top: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.list-left-col {
+    color: #ffc900;
+    font-size: 26px;
+    padding: 32px 0;
+    height: 100%;
+    border-right: 1px solid $white-color;
+    border-right-style: outset;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+}
+
+.list-title {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin-left: 85px;
+    justify-content: flex-start;
+}
+
+.list-odd {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.list-even {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.list-item {
+    color: $white-color;
+    border: transparent;
+    margin-top: 2px;
+    padding: 0px;
+}
+
+.list-row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 86px;
+}
+
+.left-col {
+    color: #ffc900;
+    font-size: 26px;
+    height: 100%;
+    border-right: 1px solid $white-color;
+    border-right-style: outset;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+}
+
+.list-id{
+    font-size: 1.5rem;
+}
+
+.lessons-list-id,
+.video-list-id,
+.special-list-id {
+    font-size: 1.5rem;
+    margin-left: -3px;
+}
+
+.lessons-list,
+.video-list,
+.special-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    width: 86%;
+    margin-left: 5px;
+    justify-content: flex-start;
+}
+
+/*** Lessons style ***/
+
+/*** Info Project style ***/
+
+.tabs-top.tabs-striped .tab-item {
+    border-radius: 5px;
+    margin: 0 2px 0 2px;
+    height: 50px;
+    border-width: 8px;
+    color: $white-color;
+    max-width: 100%;
+}
+
+.tabs-top.tabs-striped .tab-item.tab-item-active {
+    border-width: 0px 0px 7px 0px !important;
+}
+
+.info-project, .faq-modal {
+    @extend .menu-background;
+}
+
+.faq-modal{
+    margin-top: 5px;
+}
+
+.contacts-border {
+    width: 85%;
+}
+
+.contacts-border-margin-top {
+    @extend .contacts-border;
+    margin-top: 45px;
+}
+
+.contacts-border-margin-bottom {
+    @extend .contacts-border;
+    margin-bottom: 35px;
+}
+
+.contacts-title {
+    color: gray;
+    font-size: 12px;
+}
+
+.email,
+.skype,
+.site,
+.theme,
+.massage {
+    margin-left: 45px;
+    margin-bottom: 35px;
+}
+
+.contact-send-button-wrapper,
+.faq-modal-send-button-wrapper {
+    @extend .center-block;
+}
+
+.contacts-button {
+    width: 60%;
+}
+
+.contact-send-button-wrapper {
+    margin-top: 56px;
+}
+
+.contact-modal-close {
+    position: absolute;
+    right: 0;
+    margin-right: 7px;
+    color: gray;
+    font-size: large;
+}
+
+.sub-header {
+    margin: 0;
+    background-color: gray;
+    height: 80px;
+}
+
+.sub-header-title {
+    color: $white-color;
+    padding: 20px;
+    padding-top: 30px;
+    margin-top: 0px;
+}
+
+.description-wrapper {
+    padding: 20px;
+}
+
+.contact-modal-icon-size {
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+.modal-margin-bottom {
+    margin-top: 30px;
+    margin-bottom: 22px;
+}
+
+.contact-modal-wrapper,
+.textarea-modal-wrapper {
+    display: inline-flex;
+    margin-left: -30px;
+}
+
+.contact-modal-input {
+    margin-left: -7px;
+}
+
+.modal-textarea {
+    width: 345px;
+    resize: none;
+}
+
+.contacts-modal-button,
+.faq-modal-button {
+    width: 40%;
+    background-color: #e6b500;
+    margin-bottom: 5px;
+}
+
+.modal-backdrop-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*** FAQ style ***/
+.padding > .list .item:last-child {
+    margin-left: -16px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    width: 88%;
+    height: 83%;
+}
+
+.faq-input-label-wrapper {
+    margin-left: 25px;
+}
+
+.faq-modal-textarea {
+    width: 94%;
+    height: 100px;
+    resize: none;
+}
+
+.faq-modal-button, .faq-modal-send-button-wrapper {
+    margin-bottom: 5px;
+}
+
+.faq-modal-title {
+    color: gray;
+}
+
+.faq-button {
+    width: 60%;
+}
+
+.button.button-energized{
+    background-color: #f39c12;
+}
+
+.wrapper-faq-button {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.accordion-list-row {
+    position: relative;
+    height: auto;
+}
+
+.accordion-content {
+    background-color: transparent;
+    color: #fff;
+    border: 0px;
+}
+
+.accordion-item-list {
+    background-color: transparent;
+    color: #fff;
+    border: 0px solid transparent;
+}
+
+.icon.faq-icon {
+    font-size: 16px;
+}

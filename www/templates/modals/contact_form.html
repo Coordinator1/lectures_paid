@@ -1,0 +1,40 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <i class="ion-close contact-modal-close" ng-click="closeModalContactForm()"></i>
+    </ion-header-bar>
+    <ion-content class="info-project">
+        <div class="email">
+            <span class="contacts-title">Имя</span>
+            <br>
+            <div class="contact-modal-wrapper">
+                <i class="ion-person contact-modal-icon-size"></i>
+                <input type="text" placeholder="Ваше имя" class="contact-modal-input" ng-model="contacts.username">
+            </div>
+        </div>
+        <hr>
+        <div class="skype">
+            <span class="contacts-title">Email</span>
+            <br>
+            <div class="contact-modal-wrapper">
+                <i class="ion-android-mail contact-modal-icon-size"></i>
+                <input type="text" placeholder="Введите вашу почту" class="contact-modal-input" ng-model="contacts.email">
+            </div>
+        </div>
+        <hr>
+        <div class="site">
+            <span class="contacts-title">Сообщение</span>
+            <br>
+            <div class="textarea-modal-wrapper">
+                <i class="ion-android-create contact-modal-icon-size"></i>
+                <textarea class="modal-textarea" placeholder="Текст сообщения" ng-model="contacts.message">
+                </textarea>
+            </div>
+        </div>
+        <hr class="modal-margin-bottom">
+        <div class="contact-send-button-wrapper">
+            <button class="button button-energized contacts-modal-button" ng-click="checkInput();">
+                Отправить
+            </button>
+        </div>
+    </ion-content>
+</ion-modal-view>
