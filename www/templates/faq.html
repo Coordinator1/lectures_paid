@@ -6,7 +6,7 @@
             </button>
         </div>
         <ion-list class="padding">
-            <div ng-repeat="content in faqList">
+            <!--  <div ng-repeat="content in faqList">
                 <div class="item faq-list-item" ng-class-odd="'list-odd'" ng-class-even="'list-even'">
                     <ion-item class="item item-stable list-item accordion-item-list" style="background-color: transparent; color: #fff; border: 0px solid transparent;" ng-click="toggleAnswer(content)" ng-class="{active: isAnswerShown(content)}">
                         <div class="col col-20 list-left-col">
@@ -18,7 +18,22 @@
                 <ion-item class="item-accordion accordion-content" style="background-color: transparent; color: #fff; border: 0px; " ng-show="isAnswerShown(content)">
                     <span style="white-space: pre-wrap;">{{content.answer}}</span>
                 </ion-item>
-            </div>
+            </div> -->
+            <ul class="list padding">
+                <li class="item list-item-faq" ng-repeat="content in faqList"  ng-click="toggleAnswer(content)" ng-class="{active: isAnswerShown(content)}">
+                    <div class="row list-row" ng-class-odd="'list-odd'" ng-class-even="'list-even'">
+                        <div class="col col-20 left-col">
+                            <i class="icon faq-icon" ng-class="isAnswerShown(content) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                        </div>
+                        <div class="col right-col">
+                            <span class="lessons-list" style="white-space: pre-wrap;">{{content.question}}</span>
+                        </div>
+                    </div>
+                    <div class="row answer-content" ng-show="isAnswerShown(content)">
+                        <span style="white-space: pre-wrap;">{{content.answer}}</span>
+                    </div>
+                </li>
+            </ul>
         </ion-list>
     </ion-content>
 </ion-view>

@@ -4,7 +4,7 @@ lectures.controller('LessonDescriptionCtrl', function($scope, CommunicationWithS
     $timeout(function() {
         CommunicationWithServerService.getFreeLessonDescription($stateParams.lessondescriprionId).then(function(data) {
             $scope.descriptionLesson = data.data;
-            console.log("description lessons", $scope.descriptionLesson);
+            console.log("$scope.descriptionLesson", $scope.descriptionLesson);
         }).finally(function(error) {});
     }, 300);
 });

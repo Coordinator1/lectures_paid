@@ -4,6 +4,44 @@
     font-weight: 400;
     font-style: normal;
 }
+/*** Fucking web editing ***/
+code,
+kbd,
+pre,
+samp {
+    font-size: 1em;
+    font-family: roboto;
+}
+
+img {
+    width: 100%;
+}
+
+tr,
+td {
+    border: 1px solid #000;
+    padding: 5px;
+    p {
+        font-size: 12px !important;
+    }
+}
+
+p {
+    em {
+        font-style: italic;
+    }
+}
+
+ul {
+    list-style: inherit;
+    padding-left: 30px;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+/*End this shit*/
 
 h4 {
     font-weight: bolder;
@@ -13,20 +51,22 @@ h4 {
 p {
     font-size: 1.2rem;
     color: #456292;
+    font-weight: 500;
 }
 
 span {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 $white-color: #fff;
-
-button-energized{
+button-energized {
     border-color: #a2a2a2;
     background-color: #e6b500;
 }
 
+
 /* @extend class */
+
 .position-null {
     position: absolute;
     top: 0;
@@ -35,13 +75,17 @@ button-energized{
     right: 0;
 }
 
-/* @extend class*/
+
+/* @extend class */
+
 .center-block {
     width: 100%;
     text-align: center;
 }
 
-/* @extend class*/
+
+/* @extend class */
+
 .main-base {
     background-repeat: no-repeat;
     background-size: 13%;
@@ -49,7 +93,9 @@ button-energized{
     background-position: 15px;
 }
 
-/* @extend class*/
+
+/* @extend class */
+
 .main-activated {
     background-repeat: no-repeat;
     background-size: 13%;
@@ -58,7 +104,18 @@ button-energized{
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+
+/* @extend class */
+
+.flex-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /*** System style ***/
+
 .bar.bar-primary {
     background-color: #456292;
 }
@@ -75,14 +132,8 @@ ion-content {
 }
 
 .bar .button.back-button,
-.bar button.back-button {
-    color: $white-color;
-}
-
-.bar-primary .button.button-icon {
-    color: $white-color;
-}
-
+.bar button.back-button,
+.bar-primary .button.button-icon,
 .bar.bar-primary .title {
     color: $white-color;
 }
@@ -91,7 +142,9 @@ ion-content {
     background-color: #456292;
 }
 
+
 /*** Menu style ***/
+
 .menu-background {
     background-image: none;
     background-color: $white-color !important;
@@ -120,7 +173,9 @@ ion-content {
     margin-right: 15px;
 }
 
+
 /*** Tenders style ***/
+
 .item.main-faq {
     background-image: url('../img/2 (2).png');
     @extend .main-base;
@@ -214,12 +269,10 @@ ion-content {
 
 .icon-align {
     @extend .position-null;
+    @extend .flex-class;
     width: 20px;
     height: 23%;
     margin: 9% 0 0 92%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -234,28 +287,24 @@ ion-content {
 }
 
 .list-left-col {
+    @extend .flex-class;
     color: #ffc900;
     font-size: 26px;
     padding: 32px 0;
-    height: 100%;
+    height: 150px;
     border-right: 1px solid $white-color;
     border-right-style: outset;
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 87%;
 }
 
 .list-title {
+    @extend .flex-class;
     background-color: transparent;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    display: flex;
-    align-items: center;
     height: 100%;
     width: 80%;
     margin-left: 85px;
@@ -270,6 +319,14 @@ ion-content {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.list-item-faq {
+    color: $white-color;
+    border: transparent;
+    margin-top: 2px;
+    padding: 0px;
+    background-color: transparent;
+}
+
 .list-item {
     color: $white-color;
     border: transparent;
@@ -280,23 +337,25 @@ ion-content {
 .list-row {
     padding-top: 0px;
     padding-bottom: 0px;
-    height: 86px;
+    min-height: 86px;
+    height: auto;
 }
 
 .left-col {
+    @extend .flex-class;
     color: #ffc900;
     font-size: 26px;
-    height: 100%;
+    height: auto;
     border-right: 1px solid $white-color;
     border-right-style: outset;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 87%;
 }
 
-.list-id{
+.right-col {
+    height: auto;
+}
+
+.list-id {
     font-size: 1.5rem;
 }
 
@@ -310,16 +369,16 @@ ion-content {
 .lessons-list,
 .video-list,
 .special-list {
-    display: flex;
-    align-items: center;
+    @extend .flex-class;
     height: 100%;
-    justify-content: center;
     width: 86%;
     margin-left: 5px;
     justify-content: flex-start;
 }
 
+
 /*** Lessons style ***/
+
 
 /*** Info Project style ***/
 
@@ -336,12 +395,9 @@ ion-content {
     border-width: 0px 0px 7px 0px !important;
 }
 
-.info-project, .faq-modal {
+.info-project,
+.faq-modal {
     @extend .menu-background;
-}
-
-.faq-modal{
-    margin-top: 5px;
 }
 
 .contacts-border {
@@ -360,7 +416,6 @@ ion-content {
 
 .contacts-title {
     color: gray;
-    font-size: 12px;
 }
 
 .email,
@@ -396,13 +451,12 @@ ion-content {
 .sub-header {
     margin: 0;
     background-color: gray;
-    height: 80px;
+    height: auto;
 }
 
 .sub-header-title {
     color: $white-color;
     padding: 20px;
-    padding-top: 30px;
     margin-top: 0px;
 }
 
@@ -411,7 +465,7 @@ ion-content {
 }
 
 .contact-modal-icon-size {
-    font-size: 20px;
+    font-size: 1.3rem;
     margin-right: 20px;
     margin-top: 4px;
 }
@@ -425,6 +479,7 @@ ion-content {
 .textarea-modal-wrapper {
     display: inline-flex;
     margin-left: -30px;
+    width: 100%;
 }
 
 .contact-modal-input {
@@ -432,8 +487,9 @@ ion-content {
 }
 
 .modal-textarea {
-    width: 345px;
+    width: 90%;
     resize: none;
+    margin-left: -5px;
 }
 
 .contacts-modal-button,
@@ -447,10 +503,25 @@ ion-content {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+
 /*** FAQ style ***/
-.padding > .list .item:last-child {
-    margin-left: -16px;
+
+.row + .row {
+    margin-top: 5px;
 }
+
+.item .faq-list-item .list-odd {
+    height: auto;
+}
+
+.faq-modal {
+    margin-top: 5px;
+}
+
+
+/*.padding > .list .item:last-child {
+    margin-left: -16px;
+}*/
 
 .modal-backdrop {
     position: absolute;
@@ -474,7 +545,8 @@ ion-content {
     resize: none;
 }
 
-.faq-modal-button, .faq-modal-send-button-wrapper {
+.faq-modal-button,
+.faq-modal-send-button-wrapper {
     margin-bottom: 5px;
 }
 
@@ -486,7 +558,7 @@ ion-content {
     width: 60%;
 }
 
-.button.button-energized{
+.button.button-energized {
     background-color: #f39c12;
 }
 
@@ -515,4 +587,9 @@ ion-content {
 
 .icon.faq-icon {
     font-size: 16px;
+}
+
+.downloadButton {
+    justify-content: center;
+    align-items: center;
 }

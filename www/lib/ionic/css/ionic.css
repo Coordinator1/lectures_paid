@@ -3411,7 +3411,7 @@ body.grade-c {
   z-index: 9999; }
 
 .ng-animate .scroll-bar {
-  visibility: hidden; }
+  visibility: visible; }
 
 .scroll-bar-h {
   right: 2px;

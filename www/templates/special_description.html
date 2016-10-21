@@ -4,7 +4,7 @@
             <h4 class="sub-header-title">{{specialDescription.name}}</h4>
         </div>
         <div class="description-wrapper">
-            <p>{{specialDescription.description}}</p>
+            <p ng-bind-html="specialDescription.description"></p>
         </div>
     </ion-content>
 </ion-view>

@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view cache-view="false">
     <ion-header-bar>
         <i class="ion-close contact-modal-close" ng-click="closeModalContactForm()"></i>
     </ion-header-bar>
@@ -17,7 +17,7 @@
             <br>
             <div class="contact-modal-wrapper">
                 <i class="ion-android-mail contact-modal-icon-size"></i>
-                <input type="text" placeholder="Введите вашу почту" class="contact-modal-input" ng-model="contacts.email">
+                <input type="email" placeholder="Введите вашу почту" class="contact-modal-input" ng-model="contacts.email">
             </div>
         </div>
         <hr>

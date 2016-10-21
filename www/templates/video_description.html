@@ -4,8 +4,8 @@
             <h4 class="sub-header-title">{{videoDescription.name}}</h4>
         </div>
         <div class="description-wrapper">
-        	<p>{{videoDescription.description}}</p>
-            <p><a href="{{videoDescription.link}}">{{videoDescription.link}}"</a></p>
+        	<p ng-bind-html="videoDescription.description"></p>
+            	<button class="button button-energized downloadButton" ng-click="downloadLessons()">Скачать видео</button>
         </div>
     </ion-content>
 </ion-view>

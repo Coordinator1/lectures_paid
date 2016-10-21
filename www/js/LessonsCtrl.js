@@ -2,12 +2,20 @@ lectures.controller('LessonsCtrl', function($scope, $state, CommunicationWithSer
     // receiving and processing data from the server 
     CommunicationWithServerService.getFreeLesson().then(function(data) {
         $scope.lessonsList = data.data;
-        console.log("free lessons", data);
+        
+        var i = 1;
+        angular.forEach($scope.lessonsList, function(value, key) {
+            value.number = i;
+            i++;
+        });
+        console.log("$scope.lessonsList", $scope.lessonsList);
+
     }).finally(function(error) {});
 
     // path to Lesson description
     $scope.goToLessonDescription = function(lessondescriprionId) {
         $location.path('app/lesson_description/' + lessondescriprionId);
-        console.log("$scope.goToLessonDescription", lessondescriprionId);
     };
+
+
 });

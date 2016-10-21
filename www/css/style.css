@@ -4,16 +4,48 @@
   font-weight: 400;
   font-style: normal; }
 
+/*** Fucking web editing ***/
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em;
+  font-family: roboto; }
+
+img {
+  width: 100%; }
+
+tr,
+td {
+  border: 1px solid #000;
+  padding: 5px; }
+  tr p,
+  td p {
+    font-size: 12px !important; }
+
+p em {
+  font-style: italic; }
+
+ul {
+  list-style: inherit;
+  padding-left: 30px; }
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px; }
+
+/*End this shit*/
 h4 {
   font-weight: bolder;
   font-style: normal; }
 
 p {
   font-size: 1.2rem;
-  color: #456292; }
+  color: #456292;
+  font-weight: 500; }
 
 span {
-  font-size: 1.2rem; }
+  font-size: 1rem; }
 
 button-energized {
   border-color: #a2a2a2;
@@ -27,26 +59,34 @@ button-energized {
   left: 0;
   right: 0; }
 
-/* @extend class*/
+/* @extend class */
 .center-block, .contact-send-button-wrapper,
 .faq-modal-send-button-wrapper {
   width: 100%;
   text-align: center; }
 
-/* @extend class*/
+/* @extend class */
 .main-base, .item.main-faq, .item.main-video, .item.main-special {
   background-repeat: no-repeat;
   background-size: 13%;
   height: 80px;
   background-position: 15px; }
 
-/* @extend class*/
+/* @extend class */
 .main-activated, .item.main-faq.activated, .item.main-video.activated, .item.main-special.activated {
   background-repeat: no-repeat;
   background-size: 13%;
   height: 80px;
   background-position: 15px;
   background-color: rgba(0, 0, 0, 0.9); }
+
+/* @extend class */
+.flex-class, .icon-align, .list-left-col, .list-title, .left-col, .lessons-list,
+.video-list,
+.special-list {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /*** System style ***/
 .bar.bar-primary {
@@ -62,12 +102,8 @@ ion-content {
   background-color: transparent; }
 
 .bar .button.back-button,
-.bar button.back-button {
-  color: #fff; }
-
-.bar-primary .button.button-icon {
-  color: #fff; }
-
+.bar button.back-button,
+.bar-primary .button.button-icon,
 .bar.bar-primary .title {
   color: #fff; }
 
@@ -75,7 +111,8 @@ ion-content {
   background-color: #456292; }
 
 /*** Menu style ***/
-.menu-background, .info-project, .faq-modal {
+.menu-background, .info-project,
+.faq-modal {
   background-image: none;
   background-color: #fff !important; }
 
@@ -172,10 +209,7 @@ ion-content {
 .icon-align {
   width: 20px;
   height: 23%;
-  margin: 9% 0 0 92%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  margin: 9% 0 0 92%; }
 
 /*** List style for all views where use list ***/
 .faq-list-item {
@@ -189,12 +223,9 @@ ion-content {
   color: #ffc900;
   font-size: 26px;
   padding: 32px 0;
-  height: 100%;
+  height: 150px;
   border-right: 1px solid #fff;
   border-right-style: outset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 87%; }
 
 .list-title {
@@ -204,8 +235,6 @@ ion-content {
   left: 0;
   right: 0;
   margin: auto;
-  display: flex;
-  align-items: center;
   height: 100%;
   width: 80%;
   margin-left: 85px;
@@ -217,6 +246,13 @@ ion-content {
 .list-even {
   background-color: rgba(0, 0, 0, 0.5); }
 
+.list-item-faq {
+  color: #fff;
+  border: transparent;
+  margin-top: 2px;
+  padding: 0px;
+  background-color: transparent; }
+
 .list-item {
   color: #fff;
   border: transparent;
@@ -226,18 +262,19 @@ ion-content {
 .list-row {
   padding-top: 0px;
   padding-bottom: 0px;
-  height: 86px; }
+  min-height: 86px;
+  height: auto; }
 
 .left-col {
   color: #ffc900;
   font-size: 26px;
-  height: 100%;
+  height: auto;
   border-right: 1px solid #fff;
   border-right-style: outset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 87%; }
+
+.right-col {
+  height: auto; }
 
 .list-id {
   font-size: 1.5rem; }
@@ -251,10 +288,7 @@ ion-content {
 .lessons-list,
 .video-list,
 .special-list {
-  display: flex;
-  align-items: center;
   height: 100%;
-  justify-content: center;
   width: 86%;
   margin-left: 5px;
   justify-content: flex-start; }
@@ -272,9 +306,6 @@ ion-content {
 .tabs-top.tabs-striped .tab-item.tab-item-active {
   border-width: 0px 0px 7px 0px !important; }
 
-.faq-modal {
-  margin-top: 5px; }
-
 .contacts-border, .contacts-border-margin-top, .contacts-border-margin-bottom {
   width: 85%; }
 
@@ -285,8 +316,7 @@ ion-content {
   margin-bottom: 35px; }
 
 .contacts-title {
-  color: gray;
-  font-size: 12px; }
+  color: gray; }
 
 .email,
 .skype,
@@ -312,19 +342,18 @@ ion-content {
 .sub-header {
   margin: 0;
   background-color: gray;
-  height: 80px; }
+  height: auto; }
 
 .sub-header-title {
   color: #fff;
   padding: 20px;
-  padding-top: 30px;
   margin-top: 0px; }
 
 .description-wrapper {
   padding: 20px; }
 
 .contact-modal-icon-size {
-  font-size: 20px;
+  font-size: 1.3rem;
   margin-right: 20px;
   margin-top: 4px; }
 
@@ -335,14 +364,16 @@ ion-content {
 .contact-modal-wrapper,
 .textarea-modal-wrapper {
   display: inline-flex;
-  margin-left: -30px; }
+  margin-left: -30px;
+  width: 100%; }
 
 .contact-modal-input {
   margin-left: -7px; }
 
 .modal-textarea {
-  width: 345px;
-  resize: none; }
+  width: 90%;
+  resize: none;
+  margin-left: -5px; }
 
 .contacts-modal-button,
 .faq-modal-button {
@@ -354,9 +385,18 @@ ion-content {
   background-color: rgba(0, 0, 0, 0.5); }
 
 /*** FAQ style ***/
-.padding > .list .item:last-child {
-  margin-left: -16px; }
+.row + .row {
+  margin-top: 5px; }
 
+.item .faq-list-item .list-odd {
+  height: auto; }
+
+.faq-modal {
+  margin-top: 5px; }
+
+/*.padding > .list .item:last-child {
+    margin-left: -16px;
+}*/
 .modal-backdrop {
   position: absolute;
   top: 50px;
@@ -376,10 +416,8 @@ ion-content {
   height: 100px;
   resize: none; }
 
+.faq-modal-button,
 .faq-modal-send-button-wrapper {
-  margin-bottom: 5px; }
-
-.faq-modal-button {
   margin-bottom: 5px; }
 
 .faq-modal-title {
@@ -412,3 +450,7 @@ ion-content {
 
 .icon.faq-icon {
   font-size: 16px; }
+
+.downloadButton {
+  justify-content: center;
+  align-items: center; }

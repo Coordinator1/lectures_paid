@@ -4,7 +4,6 @@ lectures.controller('SpecialLessonDescriptionCtrl', function($scope, Communicati
     $timeout(function() {
         CommunicationWithServerService.getSpecialLessonDescription($stateParams.specildescriptionId).then(function(data) {
             $scope.specialDescription = data.data;
-            console.log("special lessons", $scope.specialDescription);
         }).finally(function(error) {});
     }, 300);
 });
